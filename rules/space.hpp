@@ -13,11 +13,16 @@ namespace TwistedSpirit
 	 *	\r\n: Windows
 	 *	\r: Mac up to version 9. OS X uses \n
 	 */
-    extern qi::rule <std::string::const_iterator> linebreak; 
-	
+    extern qi::rule <std::string::const_iterator> linebreak;
+
 	/**
 	 *	Matches (char)0x20 and tabs. Anything else isn't very useful in most cases.
 	 *	Treating line breaks as space breaks a lot of grammars.
 	 */
     extern qi::rule <std::string::const_iterator> space;
+
+    /**
+     *  Matches linebreak | space.
+     */
+    extern qi::rule <std::string::const_iterator> blank;
 } // namespace TwistedSpirit

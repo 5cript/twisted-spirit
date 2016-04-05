@@ -16,8 +16,6 @@ namespace TwistedSpirit
     namespace spirit = boost::spirit;
     namespace fusion = boost::fusion;
 
-    using namespace std::literals::string_literals;
-
     using char_type = char;
     using const_iterator_type = std::basic_string <char_type>::const_iterator;
 

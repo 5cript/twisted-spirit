@@ -21,8 +21,8 @@ namespace TwistedSpirit
         GrammarT grammar;
         typename GrammarT::grammar_result parsed;
 
-        auto iter = std::cbegin(text);
-        auto end = std::cend(text);
+        auto iter = text.cbegin();
+        auto end = text.cend();
 
         //static_assert (std::is_same <decltype(iter), std::wstring::const_iterator>::value, "");
 
@@ -44,7 +44,7 @@ namespace TwistedSpirit
                 else
                     return std::make_pair(ParsingResult::FAIL, typename GrammarT::grammar_result{});
             }
-            return std::make_pair(static_cast <ParsingResult> (iter - std::cbegin(text)), typename GrammarT::grammar_result{});
+            return std::make_pair(static_cast <ParsingResult> (iter - text.cbegin()), typename GrammarT::grammar_result{});
         }
         return std::make_pair(ParsingResult::FULL_SUCCESS, parsed);
     }

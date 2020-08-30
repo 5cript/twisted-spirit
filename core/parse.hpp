@@ -53,7 +53,7 @@ namespace TwistedSpirit
 
 #define TYPEDEF_GRAMMAR(NAME) \
 using grammar = NAME < \
-    qi_error::error_handler_cerr, \
-    qi_error::warning_handler_cout, \
+    TwistedSpirit::qi_error::error_handler_cerr, \
+    TwistedSpirit::qi_error::warning_handler_cout, \
     std::string::const_iterator \
 >

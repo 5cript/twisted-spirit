@@ -44,7 +44,7 @@ namespace TwistedSpirit
                 else
                     return std::make_pair(ParsingResult::FAIL, typename GrammarT::grammar_result{});
             }
-            return std::make_pair(static_cast <ParsingResult> (iter - text.cbegin()), typename GrammarT::grammar_result{});
+            return std::make_pair(static_cast <ParsingResult> (iter - text.cbegin()), parsed);
         }
         return std::make_pair(ParsingResult::FULL_SUCCESS, parsed);
     }
